@@ -74,3 +74,15 @@ def patient_normalise(data):
     normalised[np.isnan(normalised)] = 0
 
     return normalised
+
+
+def attach_names(data, names):
+    """Create datastructure containing patient records."""
+    assert len(data) == len(names)
+    output = []
+
+    for data_row, name in zip(data, names):
+        output.append({'name': name,
+                       'data': data_row})
+
+    return output
