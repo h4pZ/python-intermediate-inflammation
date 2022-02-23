@@ -1,7 +1,8 @@
 """Module containing code for plotting inflammation data."""
 
 from matplotlib import pyplot as plt
-import numpy as np
+import numpy as np  # TODO: if not needed delete this import.
+from .models import Patient
 
 
 def visualize(data_dict):
@@ -23,3 +24,10 @@ def visualize(data_dict):
     fig.tight_layout()
 
     plt.show()
+
+
+def display_patient_record(patient: Patient):
+    """Display data for a single patient."""
+    print(patient.name)
+    for obs in patient.observations:
+        print(obs.day, obs.value)
