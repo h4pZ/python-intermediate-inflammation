@@ -70,6 +70,7 @@ def test_daily_min_string():
         ([[1, 2, 3], [4, 5, float('nan')], [7, 8, 9]], [2.449, 2.449, float('nan')]),
         ([[4, 2, 5], [1, 6, 2], [4, 1, 9]], [1.414, 2.160, 2.867]),
         ([[4, -2, 5], [1, -6, 2], [-4, -1, 9]], [3.299, 2.160, 2.867]),
+        ([[0, 0, 0], [0, 0, 0], [0, 0, 0]], [0., 0., 0.])
     ])
 def test_daily_std(test, expected):
     """Test std function works for zeroes, positive integers, mix of positive/negative integers and NaNs"""
